@@ -1,0 +1,8 @@
+1. no input data or input data in wrong format:
+request again for the input data.
+2. mongodb autherization error:
+re-input the username and password.
+3. failed generating json file:
+Try more times and if it still doesn't work send user error message. 
+4. failed store the input data:
+test the installation and running of mongodb and send the users error message.
