@@ -1,0 +1,4 @@
+Decode the input data into readable format.
+mongodb api:Store and manage all the data with mongodb.
+MongoDB Monitoring Tool:use MongoDB Monitoring Tool to monitor the databse.
+json api:Save the data in json files for ai process use with json api.
