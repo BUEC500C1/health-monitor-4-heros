@@ -24,11 +24,22 @@ https://4heros.bu.edu/pr
 [post] https://4heros.bu.edu/spo2/display
 value = 100
 ```
+If command runs sucessfully, module will return HTTP200.
 ### close screen
 ```url
 [put] https://4heros.bu.edu/spo2/close
 ```
+If command runs sucessfully, module will return HTTP200.
 ### get screen status
 ```url
 [Get] https://4heros.bu.edu/spo2/status
 ```
+#### return
+```json
+{
+	"status": "running",
+	"timeStamp": 1583189357
+}
+```
+https://en.wikipedia.org/wiki/Unix_time
+Click her for more information about the timeStamp
