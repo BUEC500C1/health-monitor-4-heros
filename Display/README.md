@@ -43,3 +43,5 @@ If command runs sucessfully, module will return HTTP200.
 ```
 https://en.wikipedia.org/wiki/Unix_time
 Click her for more information about the timeStamp
+## Features
+Data will expire in 2 seconds. For example if spo2's writing api doesn't be called over 2 second, the spo2 part of screen will display nothing.
