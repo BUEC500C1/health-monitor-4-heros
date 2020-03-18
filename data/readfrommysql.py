@@ -189,10 +189,15 @@ def lateststatus(f,l):
                                              user='root',
                                              password='password')
 
-        sql_select_Query = """SELECT m1.*
-        FROM healthstate m1 LEFT JOIN healthstate m2
-        ON (m1.firstname = m2.firstname = %s AND m1.lastname = m2.lastname = %s AND m1.id < m2.id)
-        WHERE m2.id is NULL"""
+        # sql_select_Query = """SELECT m1.*
+        # FROM healthstate m1 LEFT JOIN healthstate m2
+        # ON (m1.firstname = m2.firstname = %s AND m1.lastname = m2.lastname = %s AND m1.id < m2.id)
+        # WHERE m2.id is NULL"""
+        sql_select_Query="""
+           SELECT * FROM healthstate -- standard stuff
+           WHERE firstname = %s AND lastname =%s -- predicate
+           ORDER BY date DESC -- this means highest number (most recent) first
+           LIMIT 1"""
         cursor = connection.cursor()
         cursor.execute(sql_select_Query,(f,l))
         records = cursor.fetchall()
@@ -228,4 +233,3 @@ def lateststatus(f,l):
             connection.close()
             cursor.close()
             print("MySQL connection is closed")
-
