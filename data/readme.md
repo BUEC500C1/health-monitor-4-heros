@@ -39,3 +39,4 @@ readfrommysql.lateststatus(name of person)
 ```
 readfrommysql.recordofpatient(name of person)
 ```
+![image](https://github.com/szyszy315/picture/blob/master/overa%3B%3B.png)
