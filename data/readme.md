@@ -16,6 +16,7 @@ writetomysql.inserttoDB(input content)
 ```
 readfrommysql.read()
 ```
+![image](https://github.com/szyszy315/picture/blob/master/read.png)
 #### get the record of high blood pressure
 ```
 readfrommysql.highbp()
@@ -24,6 +25,7 @@ readfrommysql.highbp()
 ```
 readfrommysql.lowbp()
 ```
+![image](https://github.com/szyszy315/picture/blob/master/lowhighbp.png)
 #### get all the record of a person
 ```
 readfrommysql.findhistory(name of person)
@@ -32,3 +34,4 @@ readfrommysql.findhistory(name of person)
 ```
 readfrommysql.lateststatus(name of person)
 ```
+![image](https://github.com/szyszy315/picture/blob/master/hw6p2.png)
