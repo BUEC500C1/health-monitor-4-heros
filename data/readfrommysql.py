@@ -44,7 +44,7 @@ def highbp():
         cursor = connection.cursor()
         cursor.execute(sql_select_Query)
         records = cursor.fetchall()
-        print("Total record of high blood pressure is: ", cursor.rowcount)
+        print("Total number of records of high blood pressure is: ", cursor.rowcount)
 
         for row in records:
             print("Id = ", row[0], )
@@ -75,7 +75,7 @@ def lowbp():
         cursor = connection.cursor()
         cursor.execute(sql_select_Query)
         records = cursor.fetchall()
-        print("Total record of low blood pressure is: ", cursor.rowcount)
+        print("Total number of records of low blood pressure is: ", cursor.rowcount)
 
         for row in records:
             print("Id = ", row[0], )
@@ -106,7 +106,7 @@ def findhistory(f,l):
         cursor = connection.cursor()
         cursor.execute(sql_select_Query,(f,l))
         records = cursor.fetchall()
-        print("Total number of records of" + f +' '+ l +"is: ", cursor.rowcount)
+        print("Total number of records of " + f +' '+ l +" is: ", cursor.rowcount)
 
         for row in records:
             print("Id = ", row[0], )
@@ -137,8 +137,14 @@ def recordofpatient(f,l):
         cursor = connection.cursor()
         cursor.execute(sql_select_Query,(f,l))
         records = cursor.fetchall()
-        print("Total number of records of" + f +' '+ l +"is: ", cursor.rowcount)
+        print("Total number of records of " + f +' '+ l +" is: ", cursor.rowcount)
 
+        highbpcnt = 0
+        lowbpcnt = 0
+        highpulsecnt = 0
+        lowpulsecnt = 0
+        highbo = 0
+        lowbo = 0
         for row in records:
             print("Id = ", row[0], )
             print("firstname = ", row[1])
@@ -147,6 +153,26 @@ def recordofpatient(f,l):
             print("blood pressure  = ", row[4])
             print("blood oxygen  = ", row[5])
             print("date  = ", row[6], '\n')
+            if row[3] > 100:
+                highpulsecnt += 1
+            elif row[3] < 60:
+                lowpulsecnt += 1
+            if row[4] > 140:
+                highbpcnt += 1
+            elif row[4] < 90:
+                lowbpcnt += 1
+            if row[5] > 100:
+                highbo += 1
+            elif row[5] < 75:
+                lowbo += 1
+        print("overall health status : ")
+        print("chance of high pulse {}".format(highpulsecnt/cursor.rowcount))
+        print("chance of low pulse {}".format(lowpulsecnt/cursor.rowcount))
+        print("chance of high blood pressure {}".format(highbpcnt/cursor.rowcount))
+        print("chance of low blood pressure {}".format(lowbpcnt/cursor.rowcount))
+        print("chance of high blood oxygen {}".format(highbo/cursor.rowcount))
+        print("chance of low blood oxygen {}".format(lowbo/cursor.rowcount))
+
 
     except Error as e:
         print("Error reading data from MySQL table", e)
@@ -156,7 +182,7 @@ def recordofpatient(f,l):
             cursor.close()
             print("MySQL connection is closed")
 
-def lateststate(f,l):
+def lateststatus(f,l):
     try:
         connection = mysql.connector.connect(host='localhost',
                                              database='hw5DB',
@@ -176,21 +202,24 @@ def lateststate(f,l):
             print("firstname = ", row[1])
             print("lastname  = ", row[2])
             print("pulse = ", row[3])
-            if row[4] > 100:
-                print("high pulse")
-            elif row[4] < 60:
-                print("low pulse")
             print("blood pressure  = ", row[4])
+            print("blood oxygen  = ", row[5])
+            print("date  = ", row[6], '\n')
+            print("summary")
+            if row[3] > 100:
+                print("high pulse")
+            elif row[3] < 60:
+                print("low pulse")
             if row[4] > 140:
                 print("high blood pressure")
             elif row[4] < 90:
                 print("low blood pressure")
-            print("blood oxygen  = ", row[5])
             if row[5] > 100:
                 print("high blood oxygen")
             elif row[5] < 75:
                 print("low blood oxygen")
-            print("date  = ", row[6], '\n')
+
+
 
     except Error as e:
         print("Error reading data from MySQL table", e)
@@ -200,5 +229,3 @@ def lateststate(f,l):
             cursor.close()
             print("MySQL connection is closed")
 
-# if __name__ == '__main__':
-#     lateststate('z','s')
