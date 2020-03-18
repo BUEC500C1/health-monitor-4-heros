@@ -34,7 +34,7 @@ readfrommysql.findhistory(name of person)
 ```
 readfrommysql.lateststatus(name of person)
 ```
-![image](https://github.com/szyszy315/picture/blob/master/hw6p2.png)
+![image](https://github.com/szyszy315/picture/blob/master/latest.png)
 #### get the evaluation of overall health status of someone 
 ```
 readfrommysql.recordofpatient(name of person)
