@@ -4,6 +4,8 @@ A Restful Api Display module for a health monitor
 ![demo](demo.png)   
 ## technology
 Display module based on .Net Core 3.1 & WPF(Windows Presentation Foundation) & ASP.Net Core
+
+* (This means it's only compatible with Microsoft Windows)
 ## 4 health status
 There are 4 health status, SpO2, Blood Presser, HR, PR need to display. They have different entry points.
 ### SpO2 Entry point
@@ -52,7 +54,7 @@ If command runs unsucessful, module will return
 {
 	"name":"spo2",
 	"status": "running",
-	"timeStamp": 1583189357
+	"timeStamp":"1584590938.5027065"
 }
 ```
 https://en.wikipedia.org/wiki/Unix_time
