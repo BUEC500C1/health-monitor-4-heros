@@ -20,7 +20,7 @@ If command runs sucessfully, module will return HTTP200.
 #### return
 ```json
 {
-	"name":"spo2"
+	"name":"spo2",
 	"status": "running",
 	"timeStamp": 1583189357
 }
