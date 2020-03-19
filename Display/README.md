@@ -2,10 +2,19 @@
 A Restful Api Display module for a health monitor 
 ## 4 health status
 There are 4 health status, SpO2, Blood Presser, HR, PR need to display. They have different entry points.
-### Entry point
-```url
-https://4heros.bu.edu/
+### BP Entry point
+```url	
+https://4heros.bu.edu/bp	
 ```
+### HR Entry point	
+```url
+https://4heros.bu.edu/hr	
+```
+### PR Entry point	
+```url
+https://4heros.bu.edu/pr	
+```
+## Apis (use spo2 as a example)
 ## Apis
 ### write data to screen
 ```url
