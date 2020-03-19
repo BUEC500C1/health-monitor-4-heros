@@ -9,8 +9,8 @@ https://4heros.bu.edu/
 ## Apis
 ### write data to screen
 ```url
-[post] https://4heros.bu.edu/spo2/display
-{"name"="spo2","value" = 100}
+[post] https://4heros.bu.edu/spo2
+{"value" = 100}
 ```
 If command runs sucessfully, module will return HTTP200.
 ### get screen status
