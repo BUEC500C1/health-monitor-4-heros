@@ -2,36 +2,25 @@
 A Restful Api Display module for a health monitor 
 ## 4 health status
 There are 4 health status, SpO2, Blood Presser, HR, PR need to display. They have different entry points.
-### SPO2 Entry point
+### Entry point
 ```url
-https://4heros.bu.edu/spo2
+https://4heros.bu.edu/
 ```
-### BP Entry point
-```url
-https://4heros.bu.edu/bp
-```
-### HR Entry point
-```url
-https://4heros.bu.edu/hr
-```
-### PR Entry point
-```url
-https://4heros.bu.edu/pr
-```
-## Apis (use spo2 as a example)
+## Apis
 ### write data to screen
 ```url
 [post] https://4heros.bu.edu/spo2/display
-value = 100
+{"name"="spo2","value" = 100}
 ```
 If command runs sucessfully, module will return HTTP200.
 ### get screen status
 ```url
-[Get] https://4heros.bu.edu/spo2/status
+[Get] https://4heros.bu.edu/spo2
 ```
 #### return
 ```json
 {
+	"name":"spo2"
 	"status": "running",
 	"timeStamp": 1583189357
 }
