@@ -54,7 +54,7 @@ If command runs unsucessful, module will return
 {
 	"name":"spo2",
 	"status": "running",
-	"timeStamp": 1583189357
+	"timeStamp":"1584590938.5027065"
 }
 ```
 https://en.wikipedia.org/wiki/Unix_time
