@@ -25,11 +25,6 @@ https://4heros.bu.edu/pr
 value = 100
 ```
 If command runs sucessfully, module will return HTTP200.
-### close screen
-```url
-[put] https://4heros.bu.edu/spo2/close
-```
-If command runs sucessfully, module will return HTTP200.
 ### get screen status
 ```url
 [Get] https://4heros.bu.edu/spo2/status
