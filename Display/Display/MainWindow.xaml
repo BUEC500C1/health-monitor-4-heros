@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Display"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="800" Foreground="White" Background="#FF444444"
         >
     <Grid>
         <Grid>
@@ -21,14 +21,14 @@
                 <RowDefinition Height="20*"/>
                 <RowDefinition Height="80*"/>
             </Grid.RowDefinitions>
-            <Label Content="HR" HorizontalAlignment="Center" Height="43" VerticalAlignment="Center" Width="80" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF005DFF"/>
-            <Label Content="{Binding HeartRateCurrent}" Grid.Column="1" HorizontalAlignment="Center" Height="154" Grid.Row="1" VerticalAlignment="Center" Width="300" Foreground="Red" FontSize="102" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
-            <Label Content="SpO2" HorizontalAlignment="Center" Height="43" VerticalAlignment="Center" Width="80" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF005DFF" Grid.Column="2"/>
-            <Label Content="NBP" HorizontalAlignment="Center" Height="43" VerticalAlignment="Center" Width="80" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF005DFF" Grid.Row="2"/>
-            <Label Content="awRR" HorizontalAlignment="Center" Height="43" VerticalAlignment="Center" Width="80" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF005DFF" Grid.Column="2" Grid.Row="2"/>
-            <Label Content="{Binding OxygenCurrent}" Grid.Column="3" HorizontalAlignment="Center" Height="154" Grid.Row="1" VerticalAlignment="Center" Width="300" Foreground="#FFDAB50F" FontSize="102" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
-            <Label Content="{Binding BloodPressure}" Grid.Column="1" HorizontalAlignment="Center" Height="154" Grid.Row="3" VerticalAlignment="Center" Width="300" Foreground="#FF002EFF" FontSize="102" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
-            <Label Content="{Binding AwRR}" Grid.Column="3" HorizontalAlignment="Center" Height="154" Grid.Row="3" VerticalAlignment="Center" Width="300" Foreground="#FF1EB254" FontSize="102" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
+            <Label x:Name="label" Content="HR" HorizontalAlignment="Center" Height="43" VerticalAlignment="Center" Width="80" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White"/>
+            <Label Content="{Binding HeartRateCurrent}" Grid.Column="1" HorizontalAlignment="Center" Height="154" Grid.Row="1" VerticalAlignment="Center" Width="300" Foreground="#FFFF8787" FontSize="102" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
+            <Label Content="SpO2" HorizontalAlignment="Center" Height="43" VerticalAlignment="Center" Width="80" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{Binding Foreground, ElementName=label}" Grid.Column="2"/>
+            <Label Content="NBP" HorizontalAlignment="Center" Height="43" VerticalAlignment="Center" Width="80" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{Binding Foreground, ElementName=label}" Grid.Row="2"/>
+            <Label Content="awRR" HorizontalAlignment="Center" Height="43" VerticalAlignment="Center" Width="80" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{Binding Foreground, ElementName=label}" Grid.Column="2" Grid.Row="2"/>
+            <Label Content="{Binding OxygenCurrent}" Grid.Column="3" HorizontalAlignment="Center" Height="154" Grid.Row="1" VerticalAlignment="Center" Width="300" Foreground="#FFFFE77D" FontSize="102" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
+            <Label Content="{Binding BloodPressure}" Grid.Column="1" HorizontalAlignment="Center" Height="154" Grid.Row="3" VerticalAlignment="Center" Width="300" Foreground="#FF7890F9" FontSize="102" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
+            <Label Content="{Binding AwRR}" Grid.Column="3" HorizontalAlignment="Center" Height="154" Grid.Row="3" VerticalAlignment="Center" Width="300" Foreground="#FF7DFFAC" FontSize="102" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
         </Grid>
 
     </Grid>
