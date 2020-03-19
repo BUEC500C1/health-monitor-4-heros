@@ -1,0 +1,17 @@
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\Display.csprojAssemblyReference.cache
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\App.g.cs
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\Display_MarkupCompile.cache
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\Display_MarkupCompile.lref
+D:\repos\health-monitor-4-heros\Display\Display\bin\Debug\netcoreapp3.1\Display.exe
+D:\repos\health-monitor-4-heros\Display\Display\bin\Debug\netcoreapp3.1\Display.deps.json
+D:\repos\health-monitor-4-heros\Display\Display\bin\Debug\netcoreapp3.1\Display.runtimeconfig.json
+D:\repos\health-monitor-4-heros\Display\Display\bin\Debug\netcoreapp3.1\Display.runtimeconfig.dev.json
+D:\repos\health-monitor-4-heros\Display\Display\bin\Debug\netcoreapp3.1\Display.dll
+D:\repos\health-monitor-4-heros\Display\Display\bin\Debug\netcoreapp3.1\Display.pdb
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\Display.g.resources
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\Display.AssemblyInfoInputs.cache
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\Display.AssemblyInfo.cs
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\Display.dll
+D:\repos\health-monitor-4-heros\Display\Display\obj\Debug\netcoreapp3.1\Display.pdb
