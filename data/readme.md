@@ -6,8 +6,9 @@ MySQL features a distinct storage-engine framework that facilitates system admin
 ![image](https://github.com/szyszy315/picture/blob/master/hw6p1.png)
 
 ## setup the db locally
+```
 mysql -uroot -p hw5DB < dumpfilename.sql
-
+```
 ## operations
 ### input
 write new data to DB
