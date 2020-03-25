@@ -5,6 +5,9 @@ MySQL offers unmatched scalability to facilitate the management of deeply embedd
 MySQL features a distinct storage-engine framework that facilitates system administrators to configure the MySQL database server for a flawless performance.
 ![image](https://github.com/szyszy315/picture/blob/master/hw6p1.png)
 
+## setup the db locally
+mysql -uroot -p hw5DB < dumpfilename.sql
+
 ## operations
 ### input
 write new data to DB
