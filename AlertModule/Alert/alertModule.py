@@ -7,6 +7,8 @@ Send data to display API
 
 import sys
 import time
+import requests
+import json
 
 def recMsg(msg):
   # Once we did not receive data, 
@@ -52,6 +54,13 @@ def alarm():
 
 def sendData(mes):
   # append data and record in log and send to users
+  url = 'https://127.0.0.1:5000/spo2'
+  #'http://httpbin.org/post'
+  s = json.dumps({ "value" : "100"})
+  # json.dumps({'key1': 'value1', 'key2': 'value2'})
+  r = requests.post(url, data=s)
+  # print(r.text)
+
   print("sent data: " + mes + ".")
 
 
@@ -61,6 +70,6 @@ def alertMod(msg, val):
     
 if __name__ == '__main__':
   msg = input("type in sth for message \n")
-  val = input("type in a value \n")
+  val = input("type in an int value \n")
   alertMod(msg, val);
 
