@@ -55,7 +55,6 @@ def alarm():
 def sendData(mes):
   # append data and record in log and send to users
   url = 'https://127.0.0.1:5000/spo2'
-  #'http://httpbin.org/post'
   s = json.dumps({ "value" : "100"})
   # json.dumps({'key1': 'value1', 'key2': 'value2'})
   r = requests.post(url, data=s)
