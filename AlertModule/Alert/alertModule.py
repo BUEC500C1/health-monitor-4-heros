@@ -1,8 +1,9 @@
 '''
-Receive message API
-Set threshold API
-Alarm API
-Send data to display API
+4 main functions:    
+Receive message   
+Set threshold  
+Alarm    
+Send data to display    
 '''
 
 import sys
