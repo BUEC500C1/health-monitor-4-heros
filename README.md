@@ -32,11 +32,34 @@ Output4: "Current value is less than threshold, ok! Sending data to display..."
 Please click [here](https://github.com/BUEC500C1/health-monitor-4-heros/tree/master/AlertModule) to see more details in images.    
 
 ## Display section    
-
+A Restful Api Display module for a health monitor.      
+There are 4 health status, SpO2, Blood Presser, HR, PR need to display. They have different entry points.     
+Value will return like below:    
+```
+{
+	"name":"spo2",
+	"status": "running",
+	"timeStamp":"1584590938.5027065"
+}
+```
+#### Details   
+Please click [here](https://github.com/BUEC500C1/health-monitor-4-heros/tree/master/Display) to see more details in images.    
 
 ## Data section     
-
+#### input
+write new data to DB
+```
+writetomysql.inserttoDB(input content)
+```
+#### output function
+read all the content in DB
+```
+readfrommysql.read()
+```
+#### Details   
+Please click [here](https://github.com/BUEC500C1/health-monitor-4-heros/tree/master/data) to see more details in images.    
 
 ## AI API section    
-
+The Artificial Intelligence API is to analize the output data, which should be stored in a json file from our data computation API, then give label-classified result. According to the information of each clients, we give medical suggestion to them.     
+For this part, we decide to implement Google API. The try-catch exception should include methods corresponding to incompleted clients' data.     
 
