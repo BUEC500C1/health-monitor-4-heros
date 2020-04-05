@@ -6,11 +6,13 @@ Alarm
 Send data to display    
 '''
 
+# import needed libraries    
 import sys
 import time
 import requests
 import json
 
+# receive information    
 def recMsg(msg):
   # Once we did not receive data, 
   # we will request again from traffic control for information.
@@ -26,7 +28,7 @@ def recMsg(msg):
   else:
     print ("Message is received and has a value")
 
-
+# set threshold to compare with received value   
 def setThre(val, msg):
   # Once there is no threshold, set up a new one.
   th = 10 # test value
@@ -46,13 +48,20 @@ def setThre(val, msg):
     time.sleep(2)
     sendData(msg)
 
-
+# alarm function    
 def alarm():
-  # alarm user
+  # alarm user for several times    
   for i in range(3):
+    print("Val is too big, alarm!")
+    time.sleep(5)
+    # after 5s sleep, we give another 3 times alarm
+    print("Val is too big, alarm!")
+    time.sleep(5)
+    # after 5s sleep, we give another 3 times alarm - last time
     print("Val is too big, alarm!")
 
 
+# send data as post method to display API
 def sendData(mes):
   # append data and record in log and send to users
   url = 'https://127.0.0.1:5000/spo2'
@@ -61,15 +70,18 @@ def sendData(mes):
   r = requests.post(url, data=s)
   # print(r.text)
 
+  # after post data to url, print the result
   print("sent data: " + mes + ".")
 
-
+# alert module    
 def alertMod(msg, val):
   recMsg(msg)
   setThre(val, msg)
     
 if __name__ == '__main__':
   msg = input("type in sth for message \n")
+  # i.e. "{'Blood_Pressure': 100, 'Pulse': 75, 'Oxygen_Level': 340}"      
   val = input("type in an int value \n")
+  # based on blodd pressure value, we set threshold to compare with, in this example is 100.   
   alertMod(msg, val);
 
