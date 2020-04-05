@@ -31,7 +31,7 @@ def recMsg(msg):
 # set threshold to compare with received value   
 def setThre(val, msg):
   # Once there is no threshold, set up a new one.
-  th = 10 # test value
+  th = 100 # test value for threshold, we can change based on collected information  
   usrVal = int(val)
 
   if usrVal > th:
