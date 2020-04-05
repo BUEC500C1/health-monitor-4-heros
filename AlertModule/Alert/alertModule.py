@@ -65,6 +65,9 @@ def alarm():
 def sendData(mes):
   # append data and record in log and send to users
   url = 'https://127.0.0.1:5000/spo2'
+  # Based on the ports needed for different kinds of info    
+  # We can change spo2 here for other 3 kinds of infos:  SpO2, Blood Presser, HR, PR  
+  
   s = json.dumps({ "value" : "100"})
   # json.dumps({'key1': 'value1', 'key2': 'value2'})
   r = requests.post(url, data=s)
