@@ -4,7 +4,7 @@ Our group has 4 members.
 Current integrated modules look like below:     
 ![draft](imgs/draftModule.PNG)   
 
-## Alert Module section     
+## Alert Module section [Zhou Shen]    
 #### Description      
 There are 4 main functions in alertMod function.   
 Right now, we let user to type in information as the input; in practical environment, we can receive information from machine.    
@@ -31,7 +31,7 @@ Output4: "Current value is less than threshold, ok! Sending data to display..."
 #### Details   
 Please click [here](https://github.com/BUEC500C1/health-monitor-4-heros/tree/master/AlertModule) to see more details in images.    
 
-## Display section    
+## Display section [Haoyang Wang]      
 A Restful Api Display module for a health monitor.      
 There are 4 health status, SpO2, Blood Presser, HR, PR need to display. They have different entry points.     
 Value will return like below:    
@@ -45,7 +45,7 @@ Value will return like below:
 #### Details   
 Please click [here](https://github.com/BUEC500C1/health-monitor-4-heros/tree/master/Display) to see more details in images.    
 
-## Data section     
+## Data section [Zeyu Song]       
 #### input
 write new data to DB
 ```
@@ -59,7 +59,7 @@ readfrommysql.read()
 #### Details   
 Please click [here](https://github.com/BUEC500C1/health-monitor-4-heros/tree/master/data) to see more details in images.    
 
-## AI API section    
+## AI API section [Geng Song]    
 The Artificial Intelligence API is to analize the output data, which should be stored in a json file from our data computation API, then give label-classified result. According to the information of each clients, we give medical suggestion to them.     
 For this part, we decide to implement Google API. The try-catch exception should include methods corresponding to incompleted clients' data.     
 
