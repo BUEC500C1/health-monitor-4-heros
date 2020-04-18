@@ -1,5 +1,13 @@
 # Display Module
 A Restful Api Display module for a health monitor 
+## Build Instructions
+### requirements
+Visual Studio 2019
+.net core 3.1
+### steps
+go to `Display` directory, double click `Display.sln`, and click the green triangle button on the top toolbar.
+### OR download release
+Check the release page on the Github
 ## demo
 ![demo](demo.png)   
 ## technology
