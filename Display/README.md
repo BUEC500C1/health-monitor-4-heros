@@ -9,6 +9,8 @@ Visual Studio 2019
 go to `Display` directory, double click `Display.sln`, and click the green triangle button on the top toolbar.
 ### OR download release
 Check the release page on the Github
+
+https://github.com/BUEC500C1/health-monitor-4-heros/releases
 ## demo
 ![demo](demo.png)   
 ## technology
