@@ -633,3 +633,4 @@ D:\repos\health-monitor-4-heros\Display\Display\obj\Release\netcoreapp3.1\win-x6
 D:\repos\health-monitor-4-heros\Display\Display\obj\Release\netcoreapp3.1\win-x64\Display.csproj.CopyComplete
 D:\repos\health-monitor-4-heros\Display\Display\obj\Release\netcoreapp3.1\win-x64\Display.dll
 D:\repos\health-monitor-4-heros\Display\Display\obj\Release\netcoreapp3.1\win-x64\Display.pdb
+D:\repos\health-monitor-4-heros\Display\Display\obj\Release\netcoreapp3.1\win-x64\Display.csprojAssemblyReference.cache

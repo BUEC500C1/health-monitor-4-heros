@@ -68,7 +68,7 @@ def sendData(mes):
   # Based on the ports needed for different kinds of info    
   # We can change spo2 here for other 3 kinds of infos:  SpO2, Blood Presser, HR, PR  
   
-  s = json.dumps({ "value" : "100"})
+  s = json.dumps({ "value" : "ceshi"})
   # json.dumps({'key1': 'value1', 'key2': 'value2'})
   r = requests.post(url, data=s, verify=False)
   # print(r.text)

@@ -35,23 +35,23 @@ namespace Display {
 
     public class ViewModel : INotifyPropertyChanged {
 
-        private int heartRateCurrent = 0;
+        private string heartRateCurrent = "0";
         public string HeartRateCurrent {
             get {
                 return heartRateCurrent.ToString();
             }
             set {
-                heartRateCurrent = Convert.ToInt32(value);
+                heartRateCurrent = value;
                 OnPropertyChanged("HeartRateCurrent");
             }
         }
-        private int oxygenCurrent = 0;
+        private string oxygenCurrent = "0";
         public string OxygenCurrent {
             get {
                 return oxygenCurrent.ToString();
             }
             set {
-                oxygenCurrent = Convert.ToInt32(value);
+                oxygenCurrent =value;
                 OnPropertyChanged("OxygenCurrent");
             }
         }
@@ -96,13 +96,13 @@ namespace Display {
                 OnPropertyChanged("BloodPressure");
             }
         }
-        private int awRR = 0;
+        private string awRR = "0";
         public string AwRR {
             get {
                 return awRR.ToString();
             }
             set {
-                awRR = Convert.ToInt32(value);
+                awRR = value;
                 OnPropertyChanged("AwRR");
             }
         }
