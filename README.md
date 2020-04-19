@@ -9,17 +9,25 @@ Current integrated modules look like below:
 There are 4 main functions in alertMod function.   
 Right now, we let user to type in information as the input; in practical environment, we can receive information from machine.    
 #### Inputs for alertMod functions    
-information from machine collected and value.     
+information from machine collected and value.    
+Will be 4 kinds of inputs.    
 i.e. 
 ```
-Input1: "{'Blood_Pressure': 10, 'Pulse': 75, 'Oxygen_Level': 340}"
-Input2: "{'Blood_Pressure': 1000, 'Pulse': 95, 'Oxygen_Level': 300}"
-Input3: "{'Blood_Pressure': 1, 'Pulse': 95, 'Oxygen_Level': 300}"
-Input4: "{'Blood_Pressure': 5.6, 'Pulse': 95, 'Oxygen_Level': 300}"
+Input1: "{"SpO2": 100, "Blood Pressure":100, "HR":200, "PR":300}"
+Input2: "{"SpO2": 150, "Blood Pressure":120, "HR":260, "PR":240}"
+Input3: "{"SpO2": 80, "Blood Pressure":90, "HR":190, "PR":160}"
+Input4: "{"SpO2": 190, "Blood Pressure":115, "HR":165, "PR":199}"
+```
+Code will be used like below:
+```
+msg1 = input("type in value for Sp02 \n")
+msg2 = input("type in value for Blood Pressure \n")
+msg3 = input("type in value for HR \n")
+msg4 = input("type in value for PR \n")
 ```
 #### Outputs for alertMod functions     
 Based on the value and threshold, our alert program will determine to alarm or send data to display.     
-In details, based on blodd pressure value, we set threshold to compare with, in this example is 10 (Ridiculous value, but just for demo).        
+In details, based on blodd pressure value, we set threshold to compare with, in this example is 100 (Ridiculous value, but just for demo).        
 For sending data to display, it will call the url and post data.      
 i.e.
 ```
