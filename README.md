@@ -4,6 +4,13 @@ Our group has 4 members.
 Current integrated modules look like below:     
 ![draft](imgs/draftModule.PNG)   
 
+## Process    
+Download our project code    
+```
+git clone https://github.com/BUEC500C1/health-monitor-4-heros.git
+```
+
+
 ## Alert Module section [Zhou Shen]    
 #### Description      
 There are 4 main functions in alertMod function.   
