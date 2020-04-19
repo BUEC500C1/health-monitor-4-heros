@@ -11,6 +11,7 @@ import sys
 import time
 import requests
 import json
+import urllib3
 
 # receive information    
 def recMsg(msg, val):
@@ -87,6 +88,7 @@ def alertMod(msg, val):
     
 
 if __name__ == '__main__':
+  urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
   msg1 = input("type in value for Sp02 \n")
   msg2 = input("type in value for Blood Pressure \n")
   msg3 = input("type in value for HR \n")
