@@ -13,7 +13,7 @@ import requests
 import json
 
 # receive information    
-def recMsg(msg):
+def recMsg(msg, val):
   # Once we did not receive data, 
   # we will request again from traffic control for information.
   try:
@@ -22,14 +22,14 @@ def recMsg(msg):
       # call a for loop to remind user
       for i in range(3):
         msg2 = input("please type in a value for msg")
-        alertMod(msg2)
+        alertMod(msg2, val)
   except NameError:
     print ("This message is not defined")
   else:
     print ("Message is received and has a value")
 
 # set threshold to compare with received value   
-def setThre(val, msg):
+def setThre(val, msg1, msg2, msg3, msg4):
   # Once there is no threshold, set up a new one.
   th = 100 # test value for threshold, we can change based on collected information  
   usrVal = int(val)
@@ -42,11 +42,11 @@ def setThre(val, msg):
   elif usrVal == th:
     print("Current value is same to threshold, warning! Sending data to display...")
     time.sleep(2)
-    sendData(msg)
+    sendData(msg1, msg2, msg3, msg4)
   else:
     print("Current value is less than threshold, ok! Sending data to display...")
     time.sleep(2)
-    sendData(msg)
+    sendData(msg1, msg2, msg3, msg4)
 
 # alarm function    
 def alarm():
@@ -62,29 +62,40 @@ def alarm():
 
 
 # send data as post method to display API
-def sendData(mes):
-  # append data and record in log and send to users
-  url = 'http://127.0.0.1:5000/spo2'
-  # Based on the ports needed for different kinds of info    
-  # We can change spo2 here for other 3 kinds of infos:  SpO2, Blood Presser, HR, PR  
-  
-  s = json.dumps({ "value" : "ceshi"})
-  # json.dumps({'key1': 'value1', 'key2': 'value2'})
-  r = requests.post(url, data=s, verify=False)
-  # print(r.text)
+def sendData(msg1, msg2, msg3, msg4):
+  # spo2 bp hr awrr --- "SpO2", "Blood Pressure", "HR", "PR"
+  kindsInfo = ["spo2", "bp", "hr", "awrr"]
+  dataInfo = [msg1, msg2, msg3, msg4]
 
+  for i in range(4):
+    url = 'http://127.0.0.1:5000/' + kindsInfo[i]
+    info = dataInfo[i]
+    s = json.dumps({ "value" : info })
+    #print(info)
+    #print(type(info))
+    r = requests.post(url, data=s, verify=False)
+    print(r.text)
+
+  mes = msg1+'/'+ msg2 + '/'+ msg3 +'/' + msg4
   # after post data to url, print the result
   print("sent data: " + mes + ".")
 
 # alert module    
 def alertMod(msg, val):
-  recMsg(msg)
-  setThre(val, msg)
+  recMsg(msg, val)
+  
     
+
 if __name__ == '__main__':
-  msg = input("type in sth for message \n")
+  msg1 = input("type in value for Sp02 \n")
+  msg2 = input("type in value for Blood Pressure \n")
+  msg3 = input("type in value for HR \n")
+  msg4 = input("type in value for PR \n")
   # i.e. "{'Blood_Pressure': 100, 'Pulse': 75, 'Oxygen_Level': 340}"      
+  msg = msg1+'/'+ msg2 + '/'+ msg3 +'/' + msg4
+
   val = input("type in an int value \n")
   # based on blodd pressure value, we set threshold to compare with, in this example is 100.   
-  alertMod(msg, val);
 
+  alertMod(msg, val)
+  setThre(val, msg1, msg2, msg3, msg4)
