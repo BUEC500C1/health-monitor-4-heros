@@ -9,6 +9,28 @@ Download our project code
 ```
 git clone https://github.com/BUEC500C1/health-monitor-4-heros.git
 ```
+There will be 4 main programs.    
+First run AlertModule/Alert/alertModule.py file.    
+```
+python alertModule.py
+```
+It will call display program automatically if alertModule program determines to send data to display.      
+Second, setup the db in data folder locally.    
+```
+mysql -uroot -p hw5DB < dumpfilename.sql
+```
+Third, run readfrommysql.py and writetomysql.py files in health-monitor-4-heros/data/ folder. 
+write new data to DB    
+```
+writetomysql.inserttoDB(input content)
+```
+read all the content in DB    
+```
+readfrommysql.read()
+```
+Detailed instructions can be found [here](https://github.com/BUEC500C1/health-monitor-4-heros/tree/master/data)     
+Last, if all runs successfully, our program will run AI part.   
+
 
 
 ## Alert Module section [Zhou Shen]    
