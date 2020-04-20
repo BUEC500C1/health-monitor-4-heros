@@ -9,3 +9,7 @@ First we collect data of pluse, blood pressure and blood oxygen rate of each cli
 Then we pass the result through the analysis function in which we have set the threshold in advance, so we can get the AI prediction of the health condition of each client.
 
 ![demo](demo2.png)
+
+The wrap-up part of AI-prediction function result is shown below
+
+![demo](demo3.png)
