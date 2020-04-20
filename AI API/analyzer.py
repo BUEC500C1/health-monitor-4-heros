@@ -30,7 +30,3 @@ if __name__ == '__main__':
     print(analyzer({'Pulse': 100, 'Blood_Pressure': 70, 'Oxygen_Level': 100}))
     print(analyzer({'Pulse': 42, 'Blood_Pressure': 105, 'Oxygen_Level': 97}))
 
-    
-    
-    
-    
