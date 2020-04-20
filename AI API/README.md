@@ -10,6 +10,9 @@ Then we pass the result through the analysis function in which we have set the t
 
 ![demo](demo2.png)
 
-The wrap-up part of AI-prediction function result is shown below
+The wrap-up part of AI-prediction function result is shown below by run the demoCode.py file
+```
+python3 demoCode.py
+```
 
 ![demo](demo3.png)
